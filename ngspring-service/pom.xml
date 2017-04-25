@@ -73,5 +73,10 @@
 			<artifactId>guava</artifactId>
 			<version>19.0</version>
 		</dependency>
+        <dependency>
+            <groupId>com.felipe.ngspring</groupId>
+            <artifactId>ngspring-persistence</artifactId>
+            <version>${ngspring.version}</version>
+        </dependency>
 	</dependencies>
 </project>
