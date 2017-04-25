@@ -146,5 +146,5 @@ typings/
 #Ignore Eclipse Maven properties
 .classpath
 .project
-ngspring-template/app/**/*.js
-ngspring-template/app/**/*.map
+ngspring-template/src/app/**/*.js
+ngspring-template/src/app/**/*js.map
