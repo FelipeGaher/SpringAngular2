@@ -4,11 +4,7 @@ import java.util.List;
 import com.felipe.ngspring.persistence.vo.AlumnoVO;
 
 /**
- *
- * Interfaz del servicio de operaciones sobre la entidad TipoDoc
- * 
  * @author fmontiel
- *
  */
 public interface AlumnosService {
 
