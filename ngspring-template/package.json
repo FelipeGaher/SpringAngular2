@@ -51,7 +51,7 @@
     "gulp-if": "^2.0.2",
     "gulp-jade": "^1.1.0",
     "gulp-jade-inheritance": "^0.5.5",
-    "gulp-load-plugins": "^1.4.0",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-pixrem": "^1.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-print": "^2.0.1",
@@ -78,7 +78,7 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.0"
+    "typescript": "^2.2.2"
   },
   "description": "TestProject Angular2",
   "main": "karma.conf.js",

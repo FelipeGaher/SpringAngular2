@@ -1,6 +1,5 @@
 package com.felipe.ngspring.web.config;
 
-
 import java.util.Locale;
 
 import org.springframework.context.MessageSource;
@@ -21,74 +20,74 @@ import org.springframework.web.servlet.view.JstlView;
 /**
  * Configuración de Spring MVC.
  * 
- * @author everis
+ * @author FelipeGaher
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.isb.scpcor.web.*" })
+@ComponentScan(basePackages = { "com.felipe.ngspring.web.*" })
 public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
 
-    /**
-     * Meotodo que se encarga de configurar los servlet por defecto.
-     *
-     * @param configurer
-     *            the configurer
-     */
-    @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
-    }
+	/**
+	 * Meotodo que se encarga de configurar los servlet por defecto.
+	 *
+	 * @param configurer
+	 *            the configurer
+	 */
+	@Override
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
+	}
 
-    /**
-     * Configure View Resolvers.
-     *
-     * @param registry
-     *            the registry
-     */
-    @Override
-    public void configureViewResolvers(ViewResolverRegistry registry) {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/");
-        viewResolver.setSuffix(".jsp");
-        registry.viewResolver(viewResolver);
-    }
+	/**
+	 * Configure View Resolvers.
+	 *
+	 * @param registry
+	 *            the registry
+	 */
+	@Override
+	public void configureViewResolvers(ViewResolverRegistry registry) {
+		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+		viewResolver.setViewClass(JstlView.class);
+		viewResolver.setPrefix("/WEB-INF/");
+		viewResolver.setSuffix(".jsp");
+		registry.viewResolver(viewResolver);
+	}
 
-    /**
-     * Add Resource Handlers.
-     *
-     * @param registry
-     *            the registry
-     */
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
-    }
+	/**
+	 * Add Resource Handlers.
+	 *
+	 * @param registry
+	 *            the registry
+	 */
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/static/**").addResourceLocations("/static/");
+	}
 
-    /**
-     * Message source.
-     *
-     * @return the message source
-     */
-    @Bean
-    public MessageSource messageSource() {
-        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-        messageSource.setBasename("/i18/scpcormsg");
-        messageSource.setDefaultEncoding("UTF-8");
-        return messageSource;
-    }
+	/**
+	 * Message source.
+	 *
+	 * @return the message source
+	 */
+	@Bean
+	public MessageSource messageSource() {
+		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+		messageSource.setBasename("/i18/ngspringmsg");
+		messageSource.setDefaultEncoding("UTF-8");
+		return messageSource;
+	}
 
-    /**
-     * Locale resolver.
-     *
-     * @return the locale resolver
-     */
-    @Bean
-    public LocaleResolver localeResolver() {
-        CookieLocaleResolver resolver = new CookieLocaleResolver();
-        resolver.setDefaultLocale(new Locale("en"));
-        resolver.setCookieName("myLocaleCookie");
-        resolver.setCookieMaxAge(4800);
-        return resolver;
-    }
+	/**
+	 * Locale resolver.
+	 *
+	 * @return the locale resolver
+	 */
+	@Bean
+	public LocaleResolver localeResolver() {
+		CookieLocaleResolver resolver = new CookieLocaleResolver();
+		resolver.setDefaultLocale(new Locale("en"));
+		resolver.setCookieName("myLocaleCookie");
+		resolver.setCookieMaxAge(4800);
+		return resolver;
+	}
 }

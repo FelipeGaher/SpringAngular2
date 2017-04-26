@@ -1,0 +1,40 @@
+<h2>{{isbanTestCtrl.holaMundo}}</h2>
+
+<table class="isb-table-accordion">
+	<thead class="isb-table-accordion__cell-head">
+		<tr>
+			<th class="isb-table-accordion__cell-head">Propiedad</th>
+			<th class="isb-table-accordion__cell-head">Etiqueta</th>
+			<th class="isb-table-accordion__cell-head">RutaImagen</th>
+			<th class="isb-table-accordion__cell-head">RombrePantalla</th>
+			<th class="isb-table-accordion__cell-head">RolesHabilitados</th>
+			<th class="isb-table-accordion__cell-head">RestDocument</th>
+			<th class="isb-table-accordion__cell-head">Acción</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="isb-table-accordion__row" data-ng-repeat="filas in isbanTestCtrl.isbanTestMock"> 
+			<td>
+				<span class="isb-table-accordion__cell-text">{{filas.propiedad}}</span>
+			</td>
+			<td>
+				<span class="isb-table-accordion__cell-text">{{filas.etiqueta}}</span>
+			</td>
+			<td>
+				<span class="isb-table-accordion__cell-text">{{filas.rutaImagen}}</span>
+			</td>
+			<td>
+				<span class="isb-table-accordion__cell-text">{{filas.nombrePantalla}}</span>	
+			</td>
+			<td>
+				<span class="isb-table-accordion__cell-text">{{filas.rolesHabilitados}}</span>
+			</td>
+			<td>
+				<span class="isb-table-accordion__cell-text">{{filas.restDocument}}</span>
+			</td>
+			<td>
+				<span class="isb-table-accordion__cell-text">{{filas.accion}}</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
