@@ -13,11 +13,7 @@ import com.felipe.ngspring.persistence.vo.AlumnoVO;
 import com.felipe.ngspring.service.interfaces.AlumnosService;
 
 /**
- *
- * Implementación del servicio alumnos
- * 
  * @author fmontiel
- *
  */
 @Component
 public class AlumnosServiceImpl implements AlumnosService {
@@ -31,7 +27,6 @@ public class AlumnosServiceImpl implements AlumnosService {
      *
      * @return listAlumnoVO
      */
-    @Override
     @org.springframework.transaction.annotation.Transactional(readOnly = true)
     public List<AlumnoVO> findAll() {
         
