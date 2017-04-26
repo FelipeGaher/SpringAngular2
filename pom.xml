@@ -16,21 +16,6 @@
 
 		<!-- Spring MVC Dependency -->
 		<dependency>
-			<dependency>
-				<groupId>com.felipe.ngspring</groupId>
-				<artifactId>ngspring-persistence</artifactId>
-				<version>${ngspring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.felipe.ngspring</groupId>
-				<artifactId>ngspring-persistence</artifactId>
-				<version>${ngspring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.felipe.ngspring</groupId>
-				<artifactId>ngspring-persistence</artifactId>
-				<version>${ngspring.version}</version>
-			</dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>4.3.7.RELEASE</version>
